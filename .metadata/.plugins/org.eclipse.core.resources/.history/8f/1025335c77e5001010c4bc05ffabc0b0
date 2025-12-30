@@ -1,0 +1,5 @@
+/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/4_WorkingWithPRinf_logs/chip_headers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Src/swo.c:11:5:__io_putchar	16	static
+../Src/swo.c:19:6:log_error	16	static
+../Src/swo.c:26:6:log_info	16	static
+../Src/swo.c:33:6:log_debug	16	static

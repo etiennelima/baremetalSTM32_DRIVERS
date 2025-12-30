@@ -1,0 +1,17 @@
+17:06:49 **** Incremental Build of configuration Debug for project 2_WorkingWithITM ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/2_WorkingWithITM/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/2_WorkingWithITM/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "2_WorkingWithITM.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/2_WorkingWithITM/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_WorkingWithITM.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_WorkingWithITM.elf
+ 
+arm-none-eabi-size  2_WorkingWithITM.elf 
+arm-none-eabi-objdump -h -S 2_WorkingWithITM.elf  > "2_WorkingWithITM.list"
+   text	   data	    bss	    dec	    hex	filename
+    828	     24	   1568	   2420	    974	2_WorkingWithITM.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_WorkingWithITM.list
+ 
+
+17:06:49 Build Finished. 0 errors, 0 warnings. (took 350ms)
+

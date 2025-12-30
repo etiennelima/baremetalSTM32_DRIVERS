@@ -21,7 +21,7 @@ int main()
 		GPIOA->ODR ^= LED_PIN;
 
 		//forced delay
-		for(int i = 0; i < 100000; i++){}
+		for(int i = 0; i < 1000000; i++){}
 
 	}
 }

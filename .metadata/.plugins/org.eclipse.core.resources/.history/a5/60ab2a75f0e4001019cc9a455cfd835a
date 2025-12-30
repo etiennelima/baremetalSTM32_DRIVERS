@@ -1,0 +1,26 @@
+#include <stm32f4xx.h>
+
+
+int sum(int a, int b){
+	return a + b;
+}
+
+int mult(int a, int b){
+	return a * b;
+}
+
+int a1 = 0, a2 = 0, a3 = 0, a4 = 0;
+int main(void){
+
+	a1 = sum(5, 6);
+
+	a2 = sum(10, 30);
+
+	a3 = mult(5, 6);
+
+	a4 = mult(10,30);
+
+	while(1){
+
+	}
+}

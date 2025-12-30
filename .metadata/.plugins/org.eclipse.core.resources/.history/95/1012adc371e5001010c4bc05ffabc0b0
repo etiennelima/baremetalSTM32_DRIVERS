@@ -1,0 +1,13 @@
+#include <stm32f4xx.h>
+#include <stdio.h>
+#include "swo.h"
+
+
+
+int main(void){
+
+ 	log_error("fatal error");
+
+	while(1){
+	}
+}

@@ -1,0 +1,13 @@
+#include <stm32f4xx.h>
+#include <stdio.h>
+
+
+
+
+int main(void){
+
+ 	lor_error();
+
+	while(1){
+	}
+}

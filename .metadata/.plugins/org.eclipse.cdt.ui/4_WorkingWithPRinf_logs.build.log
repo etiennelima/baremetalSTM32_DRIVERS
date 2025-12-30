@@ -1,0 +1,18 @@
+08:22:02 **** Incremental Build of configuration Debug for project 4_WorkingWithPRinf_logs ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/4_WorkingWithPRinf_logs/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/4_WorkingWithPRinf_logs/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/swo.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/4_WorkingWithPRinf_logs/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/4_WorkingWithPRinf_logs/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/swo.d" -MT"Src/swo.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/swo.o"
+arm-none-eabi-gcc -o "4_WorkingWithPRinf_logs.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/4_WorkingWithPRinf_logs/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_WorkingWithPRinf_logs.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_WorkingWithPRinf_logs.elf
+ 
+arm-none-eabi-size  4_WorkingWithPRinf_logs.elf 
+arm-none-eabi-objdump -h -S 4_WorkingWithPRinf_logs.elf  > "4_WorkingWithPRinf_logs.list"
+   text	   data	    bss	    dec	    hex	filename
+   5352	     92	   1900	   7344	   1cb0	4_WorkingWithPRinf_logs.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_WorkingWithPRinf_logs.list
+ 
+
+08:22:03 Build Finished. 0 errors, 0 warnings. (took 740ms)
+

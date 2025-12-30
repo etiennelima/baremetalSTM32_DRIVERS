@@ -1,0 +1,24 @@
+#include <stm32f4xx.h>
+#include <stdio.h>
+#include "uart.h"
+
+#define SR_TC (1U << 6)
+
+static void uart_wait_tc(void)
+{
+    while (!(USART2->SR & SR_TC));
+}
+
+
+int main(void){
+
+	uart2_tx_init();
+
+	while(1){
+		write_uart('A');
+		write_uart('\n');
+		write_uart('\r');
+		for(int i = 0; i < 10000; i++);
+		uart_wait_tc();
+	}
+}

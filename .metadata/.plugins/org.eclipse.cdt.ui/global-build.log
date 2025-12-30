@@ -1,23 +1,170 @@
-10:00:02 **** Incremental Build of configuration Debug for project 0_test ****
+14:50:12 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
 make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/0_test/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/0_test/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/0_test/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/0_test/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/0_test/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/0_test/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "0_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/0_test/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 0_test.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
  
-arm-none-eabi-size  0_test.elf 
-arm-none-eabi-objdump -h -S 0_test.elf  > "0_test.list"
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
    text	   data	    bss	    dec	    hex	filename
-    748	      0	   1568	   2316	    90c	0_test.elf
+    984	      0	   1568	   2552	    9f8	5_WorkingWithUart.elf
 Finished building: default.size.stdout
  
-Finished building: 0_test.list
+Finished building: 5_WorkingWithUart.list
  
-10:00:34 **** Incremental Build of configuration Debug for project 0_test ****
+14:50:17 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
 make -j4 all 
-arm-none-eabi-size  0_test.elf 
+arm-none-eabi-size  5_WorkingWithUart.elf 
    text	   data	    bss	    dec	    hex	filename
-    748	      0	   1568	   2316	    90c	0_test.elf
+    984	      0	   1568	   2552	    9f8	5_WorkingWithUart.elf
 Finished building: default.size.stdout
+ 
+14:50:27 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+   text	   data	    bss	    dec	    hex	filename
+    984	      0	   1568	   2552	    9f8	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+14:51:34 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+   3672	     92	   1900	   5664	   1620	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_WorkingWithUart.list
+ 
+14:52:47 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+    960	      0	   1568	   2528	    9e0	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_WorkingWithUart.list
+ 
+14:53:13 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:18:28: warning: multi-character character constant [-Wmultichar]
+   18 |                 write_uart('A\n');
+      |                            ^~~~~
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+    960	      0	   1568	   2528	    9e0	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_WorkingWithUart.list
+ 
+14:53:46 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:20:17: warning: implicit declaration of function 'foir' [-Wimplicit-function-declaration]
+   20 |                 foir(int i = 0; i < 10000; i++);
+      |                 ^~~~
+../Src/main.c:20:22: error: expected expression before 'int'
+   20 |                 foir(int i = 0; i < 10000; i++);
+      |                      ^~~
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:54:04 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:20:17: warning: implicit declaration of function 'foir' [-Wimplicit-function-declaration]
+   20 |                 foir(int i = 0; i < 10000; i++);
+      |                 ^~~~
+../Src/main.c:20:22: error: expected expression before 'int'
+   20 |                 foir(int i = 0; i < 10000; i++);
+      |                      ^~~
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:54:16 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+    988	      0	   1568	   2556	    9fc	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+Finished building: 5_WorkingWithUart.list
+ 
+ 
+14:55:11 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+    992	      0	   1568	   2560	    a00	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_WorkingWithUart.list
+ 
+14:55:49 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+    980	      0	   1568	   2548	    9f4	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_WorkingWithUart.list
+ 
+15:03:53 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+   1036	      0	   1568	   2604	    a2c	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_WorkingWithUart.list
+ 
+15:04:21 **** Incremental Build of configuration Debug for project 5_WorkingWithUart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/CMSIS/Include" -I"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/chip_headers/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_WorkingWithUart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/STM32CubeIDE/Advanced_BareMetal_Programming/5_WorkingWithUart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_WorkingWithUart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_WorkingWithUart.elf
+ 
+arm-none-eabi-size  5_WorkingWithUart.elf 
+arm-none-eabi-objdump -h -S 5_WorkingWithUart.elf  > "5_WorkingWithUart.list"
+   text	   data	    bss	    dec	    hex	filename
+   1040	      0	   1568	   2608	    a30	5_WorkingWithUart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_WorkingWithUart.list
  

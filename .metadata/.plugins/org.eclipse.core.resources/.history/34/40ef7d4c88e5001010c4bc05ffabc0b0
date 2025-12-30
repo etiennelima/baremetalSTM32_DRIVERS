@@ -1,0 +1,19 @@
+#include "uart.h"
+
+#define UART2EN 	(1U<<17)
+
+
+void uart2_tx_init(void)
+{
+	/***************Configure GPIO PIN*******************/
+	/*1.Enable clock to GPIO PA2*/
+	/*2.Set PA2 to alternate function mode*/
+	/*3.Set PA2 TO MODE AF7(UART2_TX*/
+
+
+	/***************Configure Uart Module****************/
+	/*4. Enable clock access to uart2*/
+	/*5. Set Baudrate*/
+	/*6. Set transfer direction*/
+	/*7. Enable uart module*/
+}
