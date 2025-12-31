@@ -1,0 +1,9 @@
+#ifndef DMA_H
+#define DMA_H
+#include <stdint.h>
+#include "stm32f4xx.h"
+
+void dma2_mem2mem_config(void);
+void dma_transfer_start(uint32_t src_buff, uint32_t dest_buff, uint32_t len);
+
+#endif

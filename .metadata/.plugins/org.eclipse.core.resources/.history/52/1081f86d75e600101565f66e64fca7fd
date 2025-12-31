@@ -1,0 +1,21 @@
+#include "stm32f4xx.h"
+#include <stdio.h>
+#include "dma.h"
+
+#define BUFFER_SIZE 	5
+
+uint16_t sensor_data_arr[BUFFER_SIZE] = {892, 731, 1234, 23};
+uint16_t temp_data_arr[BUFFER_SIZE];
+
+int main()
+{
+	uart2_tx_init()
+
+	dma2_mem2mem_config();
+
+	dma_transfer_start(sensor_data_arr, temp_data_arr, BUFFER_SIZE);
+	while(1)
+	{
+
+	}
+}

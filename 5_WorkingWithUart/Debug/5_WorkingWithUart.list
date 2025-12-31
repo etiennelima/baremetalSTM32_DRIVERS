@@ -27,9 +27,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00001410  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0000058e  00000000  00000000  00001440  2**0
+ 12 .debug_info   0000058c  00000000  00000000  00001440  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000287  00000000  00000000  000019ce  2**0
+ 13 .debug_abbrev 00000288  00000000  00000000  000019cc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  14 .debug_aranges 00000090  00000000  00000000  00001c58  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0000e952  00000000  00000000  00001d46  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00000c89  00000000  00000000  00010698  2**0
+ 17 .debug_line   00000c88  00000000  00000000  00010698  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000539a8  00000000  00000000  00011321  2**0
+ 18 .debug_str    000539a8  00000000  00000000  00011320  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00064cc9  2**0
+ 19 .comment      00000043  00000000  00000000  00064cc8  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00000140  00000000  00000000  00064d0c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -295,9 +295,6 @@ void write_uart(int ch)
  800031c:	40004400 	.word	0x40004400
 
 08000320 <set_baud>:
-
-
-
 
 static void set_baud(uint32_t periph_clk, uint32_t baudrate)
 {

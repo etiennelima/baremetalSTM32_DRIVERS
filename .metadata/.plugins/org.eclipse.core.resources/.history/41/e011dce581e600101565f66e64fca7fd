@@ -1,0 +1,60 @@
+#include "stm32f4xx.h"
+#include <stdio.h>
+#include "dma.h"
+#include "uart.h"
+
+#define BUFFER_SIZE 	5
+
+uint16_t sensor_data_arr[BUFFER_SIZE] = {892, 731, 1234, 23};
+uint16_t temp_data_arr[BUFFER_SIZE];
+
+volatile uint8_t g_transfer_cplt;
+
+int main()
+{
+	uart2_tx_init()
+
+	dma2_mem2mem_config();
+
+	dma_transfer_start(sensor_data_arr, temp_data_arr, BUFFER_SIZE);
+
+	/*wait until transfer complete*/
+	while(!g_transfer_cplt);
+
+	for(int i = 0; i < BUFFER_SIZE; i++)
+	{
+		printf("temp buffer[%d]: %d\r\n", i, temp_data_arr[i]);
+	}
+
+	while(1)
+	{
+
+	}
+}
+
+
+void DMA2_Stream0_IRQHandler(void)
+{
+	/*check if transfer complete interrupt occurred*/
+	if((DMA2->LISR) & LISR_TCIF0)
+	{
+		g_transfer_cplt = 0;
+
+		/*clear flag*/
+		DMA2->LIFCR |= LIFCR_CTCIF0;
+	}
+
+	/*check if transfer error occurred*/
+	if((DMA2->LISR) & LISR_TEIF0)
+	{
+		/*Do somthing...*/
+		/*clear flag*/
+		DMA2->LIFCR |= LISFCR_CTEIF0;
+	}
+}
+
+
+
+
+
+
