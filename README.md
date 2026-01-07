@@ -19,3 +19,28 @@ Esse estilo de programação é útil quando você quer footprint mínimo, máxi
 
 Cada diretório contém um exemplo ou driver específico:
 
+
+Os arquivos PDF incluem:
+- RM0383 — *Reference Manual* para STM32F411CE
+- Manual da placa Nucleo STM32
+- Datasheet do microcontrolador
+
+Esses documentos são essenciais para desenvolver drivers bare metal corretamente.
+
+## Exemplos de Drivers / Conteúdos
+
+Atualmente o repositório contém:
+
+- Inicialização básica do MCU
+- Debug com SWO/ITM
+- Implementação de `printf` sem HAL
+- Driver UART básico
+- GPIO com leitura/escrita direta
+- DMA simples de memória para memória
+
+## Como Usar
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/etiennelima/baremetalSTM32_DRIVERS.git
